@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link rel="stylesheet" href="/dist/style.css" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Frontend Mentor | Tip calculator app</title>
+  </head>
+  <body>
+    <div class="container">
+      <h3 class="container__title">Spli<br />tter</h3>
+
+      <div class="container__bill">
+        <div class="container__math">
+          <div class="bill">
+            <label for="bill">Bill</label>
+            <input type="text" name="bill" id="bill" placeholder="$" />
+          </div>
+
+          <div class="tip-title">Select Tip %</div>
+
+          <div class="tip-section">
+            <input type="submit" value="5%" id="five" />
+            <input type="submit" value="15%" id="fifteen" />
+            <input type="submit" value="25%" id="twenty-five" />
+            <input type="submit" value="50%" id="fifty" />
+            <input type="submit" value="custom" id="custom" />
+          </div>
+
+          <label for="people">Number of People</label>
+          <input type="text" value="" name="people" />
+        </div>
+
+        <div class="amount">
+          <div class="amount__tip">
+            <label for="tip-amount">Tip Amount / person</label>
+            <input
+              type="number"
+              name="tip-amount"
+              id="tip-amount"
+              min="0"
+              step="1"
+            />
+          </div>
+          <div class="amount__total">
+            <label for="total-person">Total / person</label>
+            <input type="text" name="total-person" id="total-person" />
+
+            <div class="amount__reset">
+              <input type="submit" value="reset" id="reset" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Joe Balzac</a>.
+    </div>
+  </body>
+</html>

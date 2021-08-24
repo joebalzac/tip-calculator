@@ -1,0 +1,35 @@
+.container {
+  display: flex;
+  flex-direction: center;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+
+  &__title {
+    text-transform: uppercase;
+  }
+
+  &__bill {
+    background: $white;
+    border-radius: 10px;
+    height: 50%;
+    max-width: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__math {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
