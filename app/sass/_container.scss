@@ -13,17 +13,33 @@
   &__bill {
     background: $white;
     border-radius: 10px;
-    height: 50%;
     max-width: 700px;
+
+    @include breakpoint-down(small) {
+      max-width: 300px;
+    }
+  }
+
+  .container__section {
+    margin: 1rem;
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @include breakpoint-down(small) {
+      flex-direction: column;
+    }
   }
 
   &__math {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: 3em;
+
+    @include breakpoint-down(small) {
+      padding: 2em;
+    }
   }
 
   &__area {
@@ -34,12 +50,40 @@
   }
 }
 
-.tip-section input {
-  background: $veryDarkCyan;
-  color: $white;
-  border: none;
-  width: 50px;
-  height: 24px;
-  border-radius: 5px;
-  font-size: 16px;
+.tip-section {
+  @include breakpoint-down(small) {
+    width: 100%;
+  }
+  & button {
+    background: $veryDarkCyan;
+    color: $white;
+    border: none;
+    width: 65px;
+    height: 30px;
+    border-radius: 5px;
+    font-size: 16px;
+    margin: 5px 1px;
+
+    @include breakpoint-down(small) {
+      width: 80px;
+    }
+
+    &.fifteen {
+      background: $strongCyan;
+      color: $veryDarkCyan;
+    }
+  }
+}
+
+.custom {
+  background: $lightGrayishCyan !important;
+  color: $darkGrayishCyan !important;
+}
+
+.bill-label,
+.tip-title,
+.people {
+  font-size: 12px;
+  color: $darkGrayishCyan;
+  font-weight: 700;
 }

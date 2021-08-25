@@ -1,22 +1,49 @@
 .amount {
   background: $veryDarkCyan;
-  height: 50%;
-  width: 100%;
-  justify-content: center;
+  padding: 3em;
   margin-left: 32px;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
-  align-items: center;
 
-  &__reset input {
+  @include breakpoint-down(small) {
+    margin-left: 0;
+    padding: 2em;
+  }
+
+  &__tip,
+  &__total {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1rem 0;
+  }
+
+  .reset {
     width: 100%;
     background: $strongCyan;
     border: none;
     border-radius: 5px;
     text-transform: uppercase;
     color: #000;
-    font-weight: 400;
+    font-weight: 700;
     padding: 0.5rem 5rem;
+    margin-top: auto;
+    cursor: pointer;
+  }
+
+  h4 {
+    font-size: 12px;
+    color: $white;
+  }
+
+  h5 {
+    font-size: 10px;
+    color: $darkGrayishCyan;
+  }
+
+  .value {
+    font-size: 24px;
+    color: $strongCyan;
   }
 }

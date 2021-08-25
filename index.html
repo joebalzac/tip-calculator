@@ -26,44 +26,54 @@
       <h3 class="container__title">Spli<br />tter</h3>
 
       <div class="container__bill">
-        <div class="container__math">
-          <div class="bill">
-            <label for="bill">Bill</label>
-            <input type="text" name="bill" id="bill" placeholder="$" />
-          </div>
-
-          <div class="tip-title">Select Tip %</div>
-
-          <div class="tip-section">
-            <input type="submit" value="5%" id="five" />
-            <input type="submit" value="15%" id="fifteen" />
-            <input type="submit" value="25%" id="twenty-five" />
-            <input type="submit" value="50%" id="fifty" />
-            <input type="submit" value="custom" id="custom" />
-          </div>
-
-          <label for="people">Number of People</label>
-          <input type="text" value="" name="people" />
-        </div>
-
-        <div class="amount">
-          <div class="amount__tip">
-            <label for="tip-amount">Tip Amount / person</label>
-            <input
-              type="number"
-              name="tip-amount"
-              id="tip-amount"
-              min="0"
-              step="1"
-            />
-          </div>
-          <div class="amount__total">
-            <label for="total-person">Total / person</label>
-            <input type="text" name="total-person" id="total-person" />
-
-            <div class="amount__reset">
-              <input type="submit" value="reset" id="reset" />
+        <div class="container__section">
+          <div class="container__math">
+            <div class="bill">
+              <label class="bill-label" for="bill">Bill</label>
+              <div class="bill__input">
+                <img src="/images/icon-dollar.svg" alt="" />
+                <input type="text" name="bill" id="bill" />
+              </div>
             </div>
+
+            <div class="tip-title">Select Tip %</div>
+
+            <div class="tip-section">
+              <button id="five">5%</button>
+              <button id="ten">10%</button>
+              <button class="fifteen" id="fifteen">15%</button>
+              <button id="twenty-five">25%</button>
+              <button id="fifty">50%</button>
+              <button class="custom" id="custom">Custom</button>
+            </div>
+
+            <div class="people-area">
+              <label class="people" for="people">Number of People</label>
+              <div class="people__number">
+                <img src="/images/icon-person.svg" alt="" />
+                <input class="people-input" type="text" name="people" />
+              </div>
+            </div>
+          </div>
+
+          <div class="amount">
+            <div class="amount__tip">
+              <div class="text">
+                <h4>Tip Amount</h4>
+                <h5>/ person</h5>
+              </div>
+              <div class="value tip-amount-value">$0.00</div>
+            </div>
+
+            <div class="amount__total">
+              <div class="text">
+                <h4>Total Amount</h4>
+                <h5>/ person</h5>
+              </div>
+              <div class="value total-value">$0.00</div>
+            </div>
+
+            <button class="reset">Reset</button>
           </div>
         </div>
       </div>
