@@ -41,3 +41,10 @@ function calculateTip(billAmount, tipPercentage, peopleAmount) {
   billTotalAmount.innerHTML = `$${totalAmount}`;
 }
 //Reset Everything
+resetButton.addEventListener("click", resetSwitch);
+function resetSwitch() {
+  billTipAmount.textContent = "$0.00";
+  billTotalAmount.textContent = "$0.00";
+  billAmount.value = "";
+  peopleAmount.value = "";
+}
