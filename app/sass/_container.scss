@@ -5,6 +5,8 @@
   align-items: center;
   flex-direction: column;
   height: 100vh;
+  // animation: slideInFromBottom 2s ease;
+  // animation: hoverEffect ease 4s infinite;
 
   &__title {
     text-transform: uppercase;
@@ -63,6 +65,13 @@
     border-radius: 5px;
     font-size: 16px;
     margin: 5px 1px;
+    cursor: pointer;
+    transition: ease-in-out;
+
+    &:active {
+      background: #003639;
+      transform: translateY(1px);
+    }
 
     @include breakpoint-down(small) {
       width: 80px;
@@ -71,6 +80,11 @@
     &.fifteen {
       background: $strongCyan;
       color: $veryDarkCyan;
+
+      &:active {
+        background: #1e9d8c;
+        transform: translateY(1px);
+      }
     }
   }
 }

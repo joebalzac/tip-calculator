@@ -1,3 +1,26 @@
+@keyframes slideInFromBottom {
+  0% {
+    opacity: 0%;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 100%;
+    transform: translateY(0%);
+  }
+}
+
+@keyframes hoverEffect {
+  0% {
+    transform: translateY(5%);
+  }
+  50% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(5%);
+  }
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -8,6 +31,10 @@ body {
   background: #7f9c9f;
   font-family: "Space Mono", monospace;
   font-weight: 400, 500, 700;
+}
+
+button {
+  cursor: pointer;
 }
 
 label {
@@ -96,6 +123,13 @@ input:focus {
   border-radius: 5px;
   font-size: 16px;
   margin: 5px 1px;
+  cursor: pointer;
+  transition: ease-in-out;
+}
+
+.tip-section button:active {
+  background: #003639;
+  transform: translateY(1px);
 }
 
 @media (max-width: 39.9375em) {
@@ -107,6 +141,11 @@ input:focus {
 .tip-section button.fifteen {
   background: #26c0ab;
   color: #00494d;
+}
+
+.tip-section button.fifteen:active {
+  background: #1e9d8c;
+  transform: translateY(1px);
 }
 
 .custom {
@@ -165,7 +204,6 @@ input:focus {
 .amount {
   background: #00494d;
   padding: 3em;
-  margin-left: 32px;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -196,6 +234,11 @@ input:focus {
   padding: 0.5rem 5rem;
   margin-top: auto;
   cursor: pointer;
+}
+
+.amount .reset:active {
+  transform: translateY(1px);
+  background: #1e9d8c;
 }
 
 .amount h4 {
